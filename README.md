@@ -129,7 +129,9 @@ We implemented an ensemble of 10 neural networks, each trained on a randomly sam
 
 ## Experimentation with Transfer Learning
 
+While recognizing the uniqueness of this dataset (quite a gem to find another like this :D), we opted to create an alternative problem derived from it. Considering that a value of 0 indicates readmittance within 30 days, we deemed this aspect more critical and envisioned it as a distinct problem. Subsequently, we trained a neural network model on the same data, focusing on two classes: one exclusively comprising 0's and the other including 1's and 2's, following the same rationale as previously outlined. We then retrained the neural network, utilizing the weights acquired from the aforementioned task, to understand the original dataset.
 
+`Results:` This experiment yielded success in learning about the occurrences of 0's. However, when applying the learned weights to understand the original dataset, performance suffered on both the validation and Kaggle datasets. This outcome could potentially be attributed to the similarities between the two problems, suggesting that it might essentially be akin to training a model on the original dataset.
 
 # Non Neural Ensemble methods
 
